@@ -2,14 +2,11 @@
 res=$(ip link add dummy0 type dummy 2>&1)
 res=$(echo $res | grep "Operation not permitted" )
 
-
 if [[ "$res" == "" ]]; then
         echo "PRIVILEGED"
 else
         echo "NOT PRIVILEGED"
 fi
-
-
 
 
 #iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE --random
