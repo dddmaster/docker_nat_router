@@ -1,0 +1,15 @@
+debug
+nodetach
+defaultroute
+#noauth
+logfile /var/log/ppp/ppp.log
+ifname pppoe-wan
+lcp-echo-interval 1
+lcp-echo-failure 5
++ipv6
+#nodefaultroute
+persist
+usepeerdns
+maxfail 1
+mtu 1492
+mru 1492
